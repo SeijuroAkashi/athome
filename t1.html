@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/art-template/index.js"></script>
+</head>
+<body>
+    <div>
+        <button>按钮</button>
+    </div>
+    <script>
+        let xhr = new XMLHttpRequest();
+        // 调用get方法
+        xhr.open('GET','')
+
+        xhr.send();
+
+        // 监听响应程序
+        xhr.onreadystatechange = function () {
+            if (xhr.status === 200 && xhr.readyState === 4) {
+                //表示响应成功，接收响应字符串
+                console.log(xhr.responseText);
+            }
+        }
+    </script>
+</body>
+</html>
